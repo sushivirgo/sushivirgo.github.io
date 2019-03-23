@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.google.com/specimen/Varela+Round" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>signalX</title>
+
+	<style type="text/css">
+		@media (max-width: 767px) {
+			.logoFont {
+				font-size: 32px;
+			}
+		}
+		@media (min-width: 767px) {
+			.logoFont {
+				font-size: 40px;
+			}
+		}
+		@media (max-width: 991px) {
+            #header.dark.transparent-header, #header.dark.semi-transparent {
+                background-color: #fff;
+                color: #444;
+            }
+            .dark h1 {
+            	color: #444;
+            	padding: 22px;
+            }
+            .vertical-middle {
+            	margin-top: -170.5px;
+            }
+            #header.transparent-header + #slider {
+            	height: 500px !important;
+            }
+            .d-none {
+            	display: visible !important;
+            }
+			.dark #header-wrap:not(.not-dark) #primary-menu > ul > li:hover > a,
+			.dark #header-wrap:not(.not-dark) #primary-menu > .container > ul > li:hover > a,
+			.dark #header-wrap:not(.not-dark) #primary-menu > ul > li.current > a:hover { color: #0c608f}
+
+			.dark #header-wrap:not(.not-dark) #primary-menu > ul > li > a,
+			.dark #header-wrap:not(.not-dark) #primary-menu > ul > li.current > a { color: #444 }
+			.dark #primary-menu:not(.not-dark) ul li { border-top-color: #EEE !important; }
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+        }
+        label {
+            color: #000;
+        }
+        .mc-field-group {
+            padding: 8px;
+        }
+        .iconlist {
+        	margin-left: 0;
+        }
+        .iconlist li {
+        	font-size: 16px;
+        	color: #0009;
+        	cursor: pointer;
+        	padding: 0 8px;
+        }
+        .iconlist li p {
+        	background-color: #66666617;
+        	padding:8px;
+        	border-radius: 30px;
+        	margin: 8px;
+        	border: 1px solid #99999929;
+        	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+        }
+        .iconlist li p:hover {
+        	border: 1px solid #99999929;
+        	box-shadow: none;
+        	border-radius: 0;
+        	padding: 18px;
+        }
+        #header {
+        	border-bottom: none;
+        }
+        #header.full-header #logo, #header.full-header #primary-menu > ul {
+        	border-right: none;
+        }
+        @media (min-width: 1200px) {
+			.container {
+			    max-width: 1370px;
+			}
+		}
+		.wrapper-content {
+			text-align: center;
+			padding: 16px;
+		}
+		.wrapper-content .header {
+			font-weight: 700;
+			color: black;
+			font-family: Lato;
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+		#daasHeader {
+			padding: 12em 5em 0 2em;
+			text-align: center;
+		}
+		#daasHeader p{
+			color: #ffffff9e;
+			font-size: 1.8em;
+			letter-spacing: 0.025em;
+			opacity: 1;
+			height: 5em;
+		}
+		#daasHeader h1{
+			color: #fff;
+			text-align: center;
+			font-size: 48px;
+			margin-bottom: 0;
+			height: 2em;
+		}/*
+		#dashHeader span.logo img {
+			width: 100%;
+		    height: 100%;
+		    max-width: 150px;
+		    max-height: 150px;
+		}*/
+		#daasHeader h1 strong{
+			font-size: 58PX;
+		}
+		@media screen and (max-width: 1280px) {
+			#daasHeader.alt {
+			    padding: 6em 3em 3em 3em;
+			}
+		}
+		#wrapper {
+		    /* max-width: calc(100% - 4em); */
+		    margin: 0 auto;
+		    width: 1378px;
+		}
+		#nav {
+			color: #636363;
+		    /*max-width: calc(100% - 4em);*/
+		    padding: 1em;
+		    background-color: #f7f7f7;
+		    border-top-left-radius: 0.25em;
+		    border-top-right-radius: 0.25em;
+		    cursor: default;
+		    text-align: center;
+		}
+		#nav ul{
+			margin: 0;
+		    padding: 0;
+		    list-style: none;
+		    margin-block-start: 1em;
+		    margin-block-end: 1em;
+		    margin-inline-start: 0px;
+		    margin-inline-end: 0px;
+		    padding-inline-start: 40px;
+		    display: block;
+		}
+		#nav ul li {
+			display: inline-block;
+			margin: 0 0.35em;
+			padding: 0;
+			vertical-align: middle;
+		}
+		#nav ul li a{
+			display: inline-block;
+			height: 2.25em;
+			line-height: 2.25em;
+			padding: 0 1.25em;
+			border: 0;
+			border-radius: 8px;
+			font-size: 18px;
+		}
+		#nav ul li a:hover {
+            background-color: #9e9e9e59;
+		}
+		#nav ul li a.active {
+			background-color: #ffffff;
+		}
+		#nav.alt {
+			position: fixed;
+			top: 0;
+			padding: 0 1em;
+			background-color: #fff;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			z-index: 100000;
+			left: 0;
+			right: 0;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2)
+		}
+		.tabs {
+			margin-bottom: 0 !important;
+		}
+        .tabs .titles {
+        	user-select: none;
+        	list-style: none;
+        	margin-bottom: -1px;
+        	padding-left: 0;
+        	margin: 0;
+        	padding: 0;
+        	border: 0;
+        	font-size: 100%;
+        	font: inherit;
+        	vertical-align: baseline;
+        } 
+        .tabs .titles li.active {
+		    background-color: #ffffff;
+		    border-bottom-color: #ffffff;
+		    color: #ff887b;
+		}
+		.tabs .titles li.active {
+		    padding-top: 1.5em;
+		    border-left-width: 1px;
+        }
+        .tabs .titles li {
+            border-color: rgba(144, 144, 144, 0.25);
+        }
+        .tabs .titles li {
+        	transition-duration: 0.2s;
+        	border-style: solid;
+        	border-width: 1px 1px 0 0;
+        	display: inline-block;
+        	font-size: 1.2em;
+        	font-weight: 400;
+        	padding: 1em 3em;
+        }
+        .tabs .panels {
+        	border: 1px solid #eee;
+        	padding: 3.75em;
+        }
+        .tabs .panel.active {
+        	opacity: 1;
+        }
+        .tabs .panel {
+        	transition: opacity 0.2s ease-in-out
+        }
+        .split {
+        	align-items: flex-start;
+        	display: flex;
+        	margin-left: -6em;
+        	margin-bottom: 2em;
+        }
+        .split > * {
+		    margin-left: 6em !important;
+		    width: 50%;
+		}
+		.split .content h2 {
+			color: #333;
+			font-size: 2em;
+			line-height: 1.5;
+			letter-spacing: 0.04em;
+			margin: 0 0 1.5em 0;
+		}
+		.split .content p {
+			margin: 0 0 2em 0;
+			font-size: 16px;
+			color: #999;
+		}
+		.split > * > :last-child {
+		    margin-bottom: 0;
+		}
+        ul.actions {
+        	display: flex;
+        	cursor: default;
+        	list-style: none;
+        	margin-left: -1em;
+        	padding-left: 0;
+        }
+        ul.actions li {
+        	padding: 0 0 0 1em;
+        	vertical-align: middle;
+        	display: list-item;
+        	text-align: -webkit-match-parent;
+        }
+        ul.actions li .button {
+		    background-color: transparent;
+		    box-shadow: inset 0 0 0 1px #5a5a5a;
+		    color: #666 !important;
+		    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		    border-radius: 4px;
+		    border: 0;
+		    cursor: pointer;
+		    display: inline-block;
+		    font-size: 0.9em;
+		    font-weight: 400;
+		    height: 3.5em;
+		    letter-spacing: 0.05em;
+		    line-height: 3.5em;
+		    padding: 0 2em;
+		    text-align: center;
+		    text-decoration: none;
+		    text-transform: uppercase;
+		    white-space: nowrap;
+		}
+		.tabs .panel .image {
+			margin-bottom: 0;
+			border-radius: 8px !important;
+		    border: 0;
+		    display: inline-block;
+		    margin: 0 0 2em 0;
+		    position: relative;
+		    width: 100%;
+		    height: 100%;
+		    max-width: 400px;
+		    max-height: 400px;
+		}
+		#tabs-1 .image, #tabs-2 .image, #tabs-3 .image{
+			width: 100%;
+		    height: 100%;
+		    max-width: 400px;
+		    max-height: 400px;
+		}
+		.col_two_fifth img {
+			width: 100%;
+		    height: 100%;
+		    max-width: 400px;
+		    max-height: 400px;
+		    border-radius: 8px !important;
+		}
+        .col_three_fifth .heading-block h2 {
+			color: #333;
+			font-size: 2em;
+			line-height: 1.5;
+			letter-spacing: 0.04em;
+			/*margin: 0 0 1.5em 0;*/
+			text-transform: inherit;
+			font-weight: 600;
+		}
+		.col_three_fifth .heading-block {
+			margin-bottom: 30px;
+		}
+		.col_three_fifth .heading-block:after{
+			border-top: 0;
+		}
+		.col_three_fifth p {
+			margin: 0 0 1em 0;
+			font-size: 16px;
+			color: #999;
+		}
+	</style>
+</head>
+
+
+
+<body class="stretched" style="background-image: linear-gradient(45deg, #e37682 15%, #5f4d93 85%);">
+
+	<div id="wrapper" class="clearfix">
+
+	<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header dark full-header" data-sticky-class="not-dark">
+			<div id="header-wrap">
+				<div class="container clearfix">
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+					<div id="logo">
+						<a href="index.html" ><h1 style="margin-bottom: 0;">SIGNAL<strong class="logoFont">X</strong></h1></a>
+					</div>
+					<nav id="primary-menu">
+						<ul style="border-right: 0">
+							<li><a href="#product-features">Product Features</a></li>
+							<li><a href="#tech_features">Tech Features</a></li>
+							<li><a href="#use_cases">Use Cases</a></li>
+							<li><a href="#faq">FAQ's</a></li>
+							<li><a href="">Get Started</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+	<!-- #header end -->
+
+	<!-- Document Wrapper
+	============================================= -->
+	
+
+			
+	<!-- Content
+	============================================= -->
+
+		<!-- <div id="daasHeader" class="alt content-wrap" style="">
+			<div class="container clearfix">
+				<div style="float: left">
+					<h1 style="
+					    color: #fff;
+					    text-align: center;
+					    font-size: 48px;
+					    margin-bottom: 0;"
+					>  
+				        Entity Research & Due Diligence
+				   	</h1>
+					<p style="
+						color: #ffffff9e;
+					    font-size: 1.8em;
+					    letter-spacing: 0.025em;
+					    opacity: 1;"
+					>   
+					    AI powered bot that runs over <br>200 checks on any entity of interest
+					</p>
+				</div>
+				
+			</div>
+		</div> -->
+        <div class="content-wrap" id="product-features">
+		    <div class="container clearfix">
+                <div class="tab-content clearfix" id="tabs-2">
+					<div class="col_three_fifth nobottommargin col_last">
+						<div class="heading-block">
+							<h1 style="
+							    color: #fff;
+							    font-size: 44px;
+							    margin-bottom: 0;
+							    text-transform: capitalize;"
+							>  
+						        Entity Research & Due Diligence
+						   	</h1>
+						</div>
+						<p style="
+							color: #ffffff9e;
+						    font-size: 1.8em;
+						    letter-spacing: 0.025em;
+						    opacity: 1;
+						    padding-right:10px"
+						>   
+						    AI powered bot that researches over 200 dimensions on any <br> entity of your interest
+
+						</p>
+					</div>
+					<div class="col_two_fifth nobottommargin"
+					    style="background-color: #fff; padding: 20px; margin-bottom: -100px !important; box-shadow: 0 2px 20px 20px rgba(0,0,0,0.2);"
+					>
+							<form style="text-align: left">
+								<div class="form-group">
+									<small id="emailHelp" class="form-text text-muted">Name of the entity you want to perform diligence on:</small>
+									<label for="exampleInputEmail1">Entity of Interest</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Company Name Pvt Ltd">
+								</div>
+								<br>
+								<!--<p style="color: #999; font-size: 16px; margin-bottom: 10px">Looking for bulk analysis? Check below for custom pricing.</p> -->
+								<div class="form-group">
+									<small id="emailHelp" class="form-text text-muted">Where do you want to receive the report :</small>
+									<label for="exampleInputEmail1">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="youremail@email.com">
+								</div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Contact</label>
+									<input type="number" class="form-control" id="exampleInputPassword1" placeholder="+91 999 999 9999">
+								</div>
+								<button type="submit" class="btn btn-primary mt-3">Request Report</button>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        
+		<!-- <nav id="nav" class="alt">
+			<ul class="alt">
+				<li><a href="#product-features">Product Features</a></li>
+				<li><a href="#tech_features">Tech Features</a></li>
+				<li><a href="#use_cases">Use Cases</a></li>
+				<li><a href="#faq">FAQ's</a></li>
+				<li><a href="">Get Started</a></li>
+			</ul>
+		</nav> -->
+
+
+		<section id="content" style="position: initial;">
+
+			<div class="content-class">
+				<div class="content-wrap" id="tech_features">
+					<div class="container clearfix">
+						<div class="pricing-box pricing-extended bottommargin clearfix">
+							<div class="pricing-desc">
+								<div class="pricing-title">
+									<h3>Flat and Simple Pricing</h3>
+								</div>
+								<div class="pricing-features">
+									<p style="margin-bottom: 0; padding: 18px 0; font-size: 18px;">Full entity analysis <br>delivered in your inbox</p>
+	                		        <p style="font-size: 18px; margin-bottom: 0;">For bulk orders please contact us at <br><strong style="font-size: 20px">info@signalx.ai</strong></p>
+								</div>
+							</div>
+							<div class="pricing-action-area">
+								<div class="pricing-meta">
+									As Low as
+								</div>
+								<div class="pricing-price">
+									<span class="price-unit"></span>INR 3000<span class="price-tenure">per report</span>
+								</div>
+								<div class="pricing-action">
+									<a href="#" class="button button-3d button-xlarge btn-block nomargin">Get Started</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-wrap" id="product-features">
+
+				<div class="container clearfix">
+
+	                <div id="div-features" class="heading-block title-center page-div">
+	                    <h2>Report Features</h2>
+	                    <span>360 degree analysis. From financials, adverse media to AML / Sanctions - all in one place</span>
+	                </div>
+	            	
+	            	<!-- <div class="tabs tabs-bordered clearfix" id="tab-2">
+
+						<ul class="tab-nav clearfix">
+							<li><a href="#tabs-1">Financial</a></li>
+							<li><a href="#tabs-2">Litigation</a></li>
+							<li><a href="#tabs-3">Media</a></li>
+						</ul>
+
+						<div class="tab-container">
+
+							<div class="tab-content clearfix" id="tabs-1">
+								<div class="split reversed">
+	            					<div class="content">
+	            						<h2>SignalX for Financial Analysis</h2>
+	            						<p>SignalX can churn through 100s of varied data sources to conduct a thorough research on the financials of any listed or unlisted entity in India.</p>
+	            						<p>The platform analyses corporate filings of listed and unlisted entities and provides the analysis in an interactive daåshboard format.</p>
+	            						<ul class="actions">
+	            							<li><a href="#" class="button">Get Started</a></li>
+	            						</ul>
+	            					</div>
+	            					<div class="image">
+	            						<img src="images/1.jpg" alt="" style="border-radius: 8px">
+	            					</div>
+	            				</div>
+							</div>
+							<div class="tab-content clearfix" id="tabs-2">
+	            				<div class="split reversed">
+	                				<div class="image">
+	                					<img src="images/1.jpg" alt="" style="border-radius: 8px">
+	                				</div>
+	            					<div class="content">
+	            						<h2>SignalX for Litigation Analysis</h2>
+	            						<p>SignalX can churn through various data sources to identify litigations that are ongoing against an individual or an entity.</p>
+	            						<p>The platform provides an interface to filter searches according to your requirements and display descriptive information on each.</p>
+	            						<ul class="actions">
+	            							<li><a href="#" class="button">Get Started</a></li>
+	            						</ul>
+	            					</div>
+	            			    </div>
+	        		        </div>
+							<div class="tab-content clearfix" id="tabs-3">
+								<div class="split reversed">
+	                				<div class="content">
+	                					<h2>SignalX for Adverse News Monitoring</h2>
+	                					<p>SignalX monitors the general web for meaningful signals on any entity.</p>
+	                					<p>Our machine learning models capture news, summarize it and classifies it give you context. </p>
+	                					<p>Track adverse news, brand presence, competitor-client engagements, M&A, new product launches and more. 
+	                					</p>
+	                					<ul class="actions">
+	                						<li><a href="#" class="button">Get Started</a></li>
+	                					</ul>
+	                				</div>
+	                				<div class="image">
+	                					<img src="images/1.jpg" alt="" style="border-radius: 8px">
+	                				</div>
+	            			    </div>
+							</div>
+
+						</div>
+
+					</div>
+
+	            	<div class="pricing-box pricing-extended bottommargin clearfix">
+
+						<div class="pricing-desc">
+							<div class="pricing-title">
+								<h3>How many Themes can you Download today?</h3>
+							</div>
+							<div class="pricing-features">
+								<p style="margin-bottom: 0; padding: 18px 0; font-size: 18px;">Full entity analysis <br>delivered in your inbox</p>
+	            		        <p style="font-size: 18px; margin-bottom: 0;">For bulk orders please contact us at <br><strong style="font-size: 20px">info@signalx.ai</strong></p>
+							</div>
+						</div>
+
+						<div class="pricing-action-area">
+							<div class="pricing-meta">
+								As Low as
+							</div>
+							<div class="pricing-price">
+								<span class="price-unit"></span>3000 Rs/-<span class="price-tenure">per report</span>
+							</div>
+							<div class="pricing-action">
+								<a href="#" class="button button-3d button-xlarge btn-block nomargin">Get Started</a>
+							</div>
+						</div>
+
+					</div> -->
+					<div id="oc-slider" class="owl-carousel carousel-widget" data-autoplay="5000" data-loop="true" 
+					    data-margin="0" data-items="1" data-animate-in="slideInRight" data-speed="2" data-animate-out="slideOutLeft">
+						<div class="tab-content clearfix" id="tabs-2">
+							<div class="col_three_fifth nobottommargin col_last">
+								<div class="heading-block">
+									<h2>SignalX for Financial Analysis</h2>
+								</div>
+								<p>SignalX can churn through 100s of varied data sources to conduct a thorough research on the financials of any listed or unlisted entity in India.</p>
+	        					<p>The platform analyses corporate filings of listed and unlisted entities and provides the analysis in an interactive dashboard format.</p>
+	        					<p>Tool computes key ratios and financial trends, thereby making it easy for you to retrieve and consume financial information.</p>
+	        					
+							</div>
+							
+						</div>
+						<div class="tab-content clearfix" id="tabs-2">
+							<div class="col_three_fifth nobottommargin col_last">
+								<div class="heading-block">
+									<h2>SignalX for Litigation Analysis</h2>
+								</div>
+								<p>SignalX can churn through various data sources to identify litigations that are ongoing against an entity.</p>
+								<p>The platform provides an interface to filter searches according to your requirements and display descriptive information on each.</p>
+								<p>Module also contains repository of all disposed cases with the final verdict against entity of interest.</p>
+        						
+							</div>
+							<div class="col_two_fifth nobottommargin">
+								<img src="images/1.jpg" alt="Image">
+							</div>
+						</div>
+						<div class="tab-content clearfix" id="tabs-3">
+							<div class="col_three_fifth nobottommargin col_last">
+								<div class="heading-block">
+									<h2>SignalX for Adverse News Monitoring</h2>
+								</div>
+								<p>SignalX monitors the general web for meaningful signals on any entity.</p>
+								<p>Our machine learning models capture news, summarize it and classifies it give you context. </p>
+								<p>Track adverse news, brand presence, competitor-client engagements, M&A, new product launches and more. 
+								</p>
+        						
+							</div>
+							<div class="col_two_fifth nobottommargin">
+								<img src="images/1.jpg" alt="Image">
+							</div>
+						</div>
+						<div class="tab-content clearfix" id="tabs-3">
+							<div class="col_three_fifth nobottommargin col_last">
+								<div class="heading-block">
+									<h2>Identify Regulatory Violations, AML and Sanctions hits</h2>
+								</div>
+								<p>SignalX checks for any regulatory violations by the entity as declared by banks and regulators.</p>
+								<p>SignalX also runs entity detection checks on AML and Sanctions lists put forth by key global platforms </p>
+								<p>Maximise new business potential through the increased speed and efficiency of your sales and on-boarding process. 
+								</p>
+        						
+							</div>
+							<div class="col_two_fifth nobottommargin">
+								<img src="images/1.jpg" alt="Image">
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- Content
+			============================================= -->
+			<div class="content-class" style="background-color: #f9f9f9">
+
+				<div class="content-wrap" id="tech_features">
+
+					<div class="container clearfix">
+
+	                    <div id="div-features" class="heading-block title-center page-div">
+	                        <h2>Features Overview</h2>
+	                    </div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-border fbox-effect">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-screen i-alt"></i></a>
+								</div>
+								<h3>In depth analysis, fully automated </h3>
+								<p>Our bots and spiders run through the web and on sources of your choice to fetch tonnes of unstructured data on entities, industries and on anything you need.  </p>
+							</div>
+						</div>
+
+						<div class="col_one_third">
+							<div class="feature-box fbox-border fbox-effect">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-eye i-alt"></i></a>
+								</div>
+								<h3>Leverage Alternative Data</h3>
+								<p>Let our systems identify ‘interesting’ trends and signals from tons of data points. We’re building our systems to think like an analyst.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third col_last">
+							<div class="feature-box fbox-border fbox-effect">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-beaker i-alt"></i></a>
+								</div>
+								<h3>Cognitive Automation</h3>
+								<p>We’ve trained bots to fetch data from varied sources from across the web and look for impactful signals. Our bots imitate what a human analyst would do, but with improved precision and scale. </p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col_one_third nobottommargin">
+							<div class="feature-box fbox-border fbox-effect">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-stack i-alt"></i></a>
+								</div>
+								<h3>Advanced NLP</h3>
+								<p>Documents, files, text is read by the bot using a proprietary AI engine to make sense of the data. The insights are then fed into an path breaking User Interface that helps consume these insights on the fly - as a report or even as a dashboard.</p>
+							</div>
+						</div>
+
+						<div class="col_one_third nobottommargin">
+							<div class="feature-box fbox-border fbox-effect">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-tint i-alt"></i></a>
+								</div>
+								<h3>Continuous risk monitoring</h3>
+								<p>Monitor risks continuously over time. Our automated monitoring alerts you as and when a serious risk appears that you need to look at. </p>
+							</div>
+						</div>
+
+						<div class="col_one_third nobottommargin col_last">
+							<div class="feature-box fbox-border fbox-effect">
+								<div class="fbox-icon">
+									<a href="#"><i class="icon-text-width i-alt"></i></a>
+								</div>
+								<h3>Analyst on demand</h3>
+								<p>100 hours of analyst time is included with bulk packages to help you perform custom research and analysis on any entity.  Analyst comes with core data analysis and reporting competencies.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+					</div>
+
+				</div>
+
+	        </div>
+	        <!-- #content end -->
+
+	        <div class="content-class" style="">
+
+	            <div class="content-wrap" id="use_cases">
+
+	                <div class="container clearfix">
+
+	                    <div id="div-features" class="heading-block title-center page-div">
+	                        <h2>Diligence Applications</h2>
+	             
+	                    </div>
+		                <div id="posts" class="post-grid grid-container clearfix" data-layout="fitRows">
+
+							<div class="entry clearfix">
+								<div class="entry-image">
+									<a href="images/1.jpg" data-lightbox="image"><img class="image_fade" src="images/1.jpg" alt="Standard Post with Image"></a>
+								</div>
+								<div class="entry-title">
+									<h2><a href="blog-single.html">Financial Insitutions</a></h2>
+								</div>
+								<div class="entry-content">
+									<p>Reduce credit disbursement cycles and improve onboarding time. SignalX automates the diligence process and helps you leverage web data in risk management</p>
+								</div>
+							</div>
+
+							<div class="entry clearfix">
+								<div class="entry-image">
+									<a href="images/1.jpg" data-lightbox="image"><img class="image_fade" src="images/1.jpg" alt="Standard Post with Image"></a>
+								</div>
+								<div class="entry-title">
+									<h2><a href="blog-single.html">Private Equity & Legal</a></h2>
+								</div>
+								<div class="entry-content">
+									<p>SignalX is the go-to source for checking signals on your entity of interest. Top up your due diligience process with SignalX reports.</p>
+								</div>
+							</div>
+
+							<div class="entry clearfix">
+								<div class="entry-image">
+									<a href="images/1.jpg" data-lightbox="image"><img class="image_fade" src="images/1.jpg" alt="Standard Post with Image"></a>
+								</div>
+								<div class="entry-title">
+									<h2><a href="blog-single.html">Family Offices</a></h2>
+								</div>
+								<div class="entry-content">
+									<p>Continously monitor and track risk signals on the entities in your portfolio. SignalX enables faster decision making.</p>
+								</div>
+							</div>
+
+							<div class="entry clearfix">
+								<div class="entry-image">
+									<a href="images/1.jpg" data-lightbox="image"><img class="image_fade" src="images/1.jpg" alt="Standard Post with Image"></a>
+								</div>
+								<div class="entry-title">
+									<h2><a href="blog-single.html">Procurement Teams</a></h2>
+								</div>
+								<div class="entry-content">
+									<p>Shorten your vendor onboarding cycle and perform a thorough diligience on the entities you are doing business with. </p>
+								</div>
+							</div>
+
+						</div>
+
+	                </div>
+
+	            </div>
+
+	        </div>
+
+	        <div class="content-class" style="background-color: #f9f9f9">
+
+				<div class="content-wrap" id="faq">
+
+					<div class="container clearfix">
+	        
+	                    <div id="div-faqs" class="heading-block title-center page-div">
+	                        <h2>Frequently Asked Questions</h2>
+	                
+	                    </div>
+
+	                    <div class="col_half nobottommargin">
+
+
+							<div class="accordion accordion-border clearfix" data-state="closed">
+
+								<div class="acctitle"><i class="acc-closed icon-question-sign"></i><i class="acc-open icon-question-sign"></i>I have dealt with my clients for many years, do I still need to carry out customer due diligence?</div>
+								<div class="acc_content clearfix">You need to keep CDD up-to-date for all your clients. You may have sufficient documentary ID details on your files, but if there has been any subsequent change to their circumstances or risk profile, you should update your CDD. It is advised to review clients’ CDD on a regular basis.</div>
+
+								<div class="acctitle"><i class="acc-closed icon-comments-alt"></i><i class="acc-open icon-comments-alt"></i>How often do i need to perfom deligence checks on the entities I am associated with?</div>
+								<div class="acc_content clearfix">Your customers' circumstances can change frequently, meaning that a historic check may not reflect a customer’s status now. Our ongoing monitoring service will check the status of the customers you monitor on a daily basis to keep your records up to date.</div>
+
+							</div>
+
+						</div>
+						<div class="col_half nobottommargin col_last">
+
+							<div class="accordion accordion-border clearfix" data-state="closed">
+
+								<div class="acctitle"><i class="acc-closed icon-lock3"></i><i class="acc-open icon-lock3"></i>Do you offer tiered reports?</div>
+								<div class="acc_content clearfix">No, unlike some of our competitors, we believe in providing all the data you need in one report to make an informed decision. </div>
+
+								<div class="acctitle"><i class="acc-closed icon-picture"></i><i class="acc-open icon-picture"></i>What Where do you get your data from?/div>
+								<div class="acc_content clearfix">Our data is collected from over 200 sources; where possible we will collect information from official registries similar to Ministry of Corporate Affairs. Apart from this, we keep a pulse on the media that is generated in over 100000 URLs for Signals on entities of interest. </div>
+
+
+							</div>
+
+						</div>
+
+	                </div>
+	                
+	            </div>
+
+	        </div>
+
+        </section>
+
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+
+					<div class="col_full">
+
+							<div class="widget clearfix">
+	
+								<!-- <img src="images/signalXR.png" alt="" class="footer-logo"> -->
+	
+								<p><strong>SignalX</strong> is a knowledge extraction solution that helps enterprises extract business-critical insights from <br>exponentially increasing public and private web data on entities and markets. 
+								</p>
+	
+								<div class="clearfix" style="padding: 10px 0;">
+									<div class="col_half" style="background: url('images/world-map.png') no-repeat;">
+										<address class="nobottommargin">
+											<abbr title="Headquarters" style="display: inline-block;margin-bottom: 7px;"><strong>Office:</strong></abbr><br>
+											Plot No: 1004, A-Block, Platina<br>
+											Gachibowli, Hyderabad - 500032<br>
+										</address>
+									</div>
+									<div class="col_half col_last">
+										<abbr title="Phone Number"><strong>Phone:</strong></abbr> +91 9440240876<br>
+										<abbr title="Email Address"><strong>Email:</strong></abbr> info@signalx.ai
+									</div>
+								</div>
+	
+								<a href="https://twitter.com/SignalX4" class="social-icon si-small si-rounded topmargin-sm si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+	
+								<a href="https://www.linkedin.com/company/nebulae-digital" class="social-icon si-small si-rounded topmargin-sm si-linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+	
+							</div>
+	
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+	
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div style="text-align: center;">
+						Copyrights &copy; 2019 All Rights Reserved by SignalX Private Limited.
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132042388-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132042388-1');
+	</script>
+
+	<!-- Start of LiveChat (www.livechatinc.com) code -->
+		<script type="text/javascript">
+		window.__lc = window.__lc || {};
+		window.__lc.license = 10659007;
+		(function() {
+		  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+		  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+		})();
+		</script>
+		<noscript>
+		<a href="https://www.livechatinc.com/chat-with/10659007/" rel="nofollow">Chat with us</a>,
+		powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+		</noscript>
+		<!-- End of LiveChat code -->
+
+</body>
+</html>
